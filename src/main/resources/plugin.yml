@@ -20,3 +20,6 @@ commands:
     aliases:
       - suit-up
 
+  resethealth:
+    description: resets health and hunger
+

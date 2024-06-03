@@ -26,6 +26,7 @@ public final class Main extends JavaPlugin implements Listener {
         getCommand("stats").setExecutor(new PVPCommands());
         getCommand("resetstats").setExecutor(new PVPCommands());
         getCommand("kit").setExecutor(new PVPCommands());
+        getCommand("resethealth").setExecutor(new PVPCommands());
 
         this.saveDefaultConfig();
     }

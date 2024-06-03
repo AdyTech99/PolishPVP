@@ -2,6 +2,7 @@ package io.github.adytech99.polishpvp.commands;
 
 import io.github.adytech99.polishpvp.StatsHandler;
 import io.github.adytech99.polishpvp.KitHandler;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -27,6 +28,11 @@ public class PVPCommands implements CommandExecutor {
                     player.sendMessage("[PolishPVP] Statistics reset");
                 }
                 else player.sendMessage("[PolishPVP] Type /resetstats confirm");
+            }
+            else if(command.getName().equalsIgnoreCase("resethealth")){
+                player.setHealth(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
+                player.setSaturation(6);
+                player.setFoodLevel(20);
             }
         }
         return true;
