@@ -1,0 +1,3 @@
+do_health_reset: true
+do_saturation_reset: true
+do_hunger_reset: true
