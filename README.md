@@ -1,0 +1,1 @@
+/kit and /stats
