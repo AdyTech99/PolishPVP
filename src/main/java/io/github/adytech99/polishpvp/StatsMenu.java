@@ -16,8 +16,10 @@ public class StatsMenu implements Listener {
 
         ItemStack killsItem = createItem(Material.DIAMOND_SWORD, ChatColor.RED + "Kills: " + kills);
         ItemStack deathsItem = createItem(Material.SKELETON_SKULL, ChatColor.RED + "Deaths: " + deaths);
+        ItemStack kdrItem = createItem(Material.SHIELD, ChatColor.YELLOW + "KDR: " + kills/deaths);
 
         inventory.setItem(3, killsItem);
+        inventory.setItem(4, kdrItem);
         inventory.setItem(5, deathsItem);
 
         player.openInventory(inventory);
@@ -26,7 +28,7 @@ public class StatsMenu implements Listener {
     private static ItemStack createItem(Material material, String displayName) {
         ItemStack item = new ItemStack(material);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(displayName);
+        if(meta != null) meta.setDisplayName(displayName);
         item.setItemMeta(meta);
         return item;
     }
